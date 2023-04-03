@@ -1,0 +1,9 @@
+lang:
+  name: "Built-in Language"
+  change-language: "Your language has been changed to %s"
+
+  console-command-error: "The plugin sent an error when loading commands. Did you use the complete plugin?"
+
+  message-registered-plugin: "The following is a list of plugins that have called RenYuan-Lib:"
+  message-nothing: "nothing"
+  message-only-player: "Only player can use this command"
