@@ -16,12 +16,10 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class StorageUtil {
-
-    private static final HashMap<Plugin, StorageUtil> managerHashMap = new HashMap<>();
     private static final HashMap<UUID, FileConfiguration> playerDataMap = new HashMap<>();
 
     static {
-        Bukkit.getPluginManager().registerEvents(new StorageListener(), RenYuanLib.getInstance());
+        Bukkit.getPluginManager().registerEvents(new StorageListener(), RenYuanLib.instance);
     }
 
     public static void setPublicPlayerData(UUID player, String path, String data) {
@@ -34,14 +32,10 @@ public class StorageUtil {
         return getPlayerDataString(player,path,null);
     }
 
-    public static StorageUtil getStorageManager(Plugin plugin) {
-        return managerHashMap.get(plugin);
-    }
-
     private static FileConfiguration getDataConfig(UUID player) {
         FileConfiguration config = playerDataMap.get(player);
         if (config != null) return config;
-        return ConfigUtil.newConfig("player-data\\" + player + ".yml", RenYuanLib.getInstance());
+        return ConfigUtil.newConfig("player-data\\" + player + ".yml", RenYuanLib.instance);
     }
 
     public static void setPrivatePlayerData(UUID player, String path, String data,Plugin plugin) {
@@ -65,7 +59,7 @@ public class StorageUtil {
         dataConfig.set(privatePath + path, data);
 
         try {
-            dataConfig.save(new File(RenYuanLib.getInstance().getDataFolder(),"player-data\\" + player + ".yml"));
+            dataConfig.save(new File(RenYuanLib.instance.getDataFolder(),"player-data\\" + player + ".yml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

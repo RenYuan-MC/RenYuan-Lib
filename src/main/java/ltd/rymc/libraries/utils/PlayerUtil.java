@@ -3,6 +3,7 @@ package ltd.rymc.libraries.utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 public class PlayerUtil {
@@ -27,5 +28,9 @@ public class PlayerUtil {
         for(int l = originalNames.length; j < l; ++j) names[j + 1] = originalNames[j];
 
         return names;
+    }
+
+    public static String[] arraysFilter(String[] arr,String fil) {
+        return Arrays.stream(arr).filter(s -> !fil.equals(s)).toArray(String[]::new);
     }
 }
