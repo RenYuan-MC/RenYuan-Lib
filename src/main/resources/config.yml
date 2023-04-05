@@ -1,5 +1,0 @@
-# 所有以RenYuan-Lib为前置的数据统计
-metrics-global: true
-
-# 插件自身的数据统计
-metrics: true
