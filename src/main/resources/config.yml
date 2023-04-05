@@ -3,6 +3,3 @@ metrics-global: true
 
 # 插件自身的数据统计
 metrics: true
-
-# 插件语言
-lang: zh_CN
