@@ -1,6 +1,7 @@
 package ltd.rymc.libraries.utils;
 
 import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.Arrays;
@@ -22,6 +23,10 @@ public class PlayerUtil {
         int j = 0;
         for(int l = originalNames.length; j < l; ++j) names[j + 1] = originalNames[j];
         return names;
+    }
+
+    public static void sendMessage(CommandSender sender,String message,String prefix){
+        sender.sendMessage((sender instanceof Player ? prefix : "") + message);
     }
 
     public static String[] arraysFilter(String[] arr,String fil) {
