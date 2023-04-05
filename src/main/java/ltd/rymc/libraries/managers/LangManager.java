@@ -21,7 +21,7 @@ public class LangManager {
         FileConfiguration langResourceConfig = ConfigUtil.getResourceConfig(langName, plugin);
 
         if (langResourceConfig == null) return;
-        ConfigurationSection langSection = langResourceConfig.getConfigurationSection("lang");
+        ConfigurationSection langSection = langResourceConfig.getDefaultSection();
         if (langSection == null) return;
         for (String key : langSection.getKeys(false)) {
             keyHashMap.put(key,langConfig.getString(key,langResourceConfig.getString(key)));
