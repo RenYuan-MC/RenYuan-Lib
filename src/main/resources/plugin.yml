@@ -5,11 +5,3 @@ api-version: 1.13
 authors: [ RENaa_FD ]
 description: 任渊前置库
 website: https://rymc.ltd/
-commands:
-  rylib:
-    description: 任渊前置库主命令
-    usage: "§f[§6服务器§f] 未知的命令"
-permissions:
-  rylib.admin:
-    description: 任渊前置库主权限
-    default: op
