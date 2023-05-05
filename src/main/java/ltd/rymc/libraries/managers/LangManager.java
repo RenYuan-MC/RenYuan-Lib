@@ -32,9 +32,9 @@ public class LangManager {
         return managerHashMap.get(plugin);
     }
 
-    public String format(String key) {
-        String format = keyHashMap.get(key);
-        return format == null ? key : format;
+    public String get(String key) {
+        String message = keyHashMap.get(key);
+        return message == null ? key : message;
     }
 
 }

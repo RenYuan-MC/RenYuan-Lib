@@ -6,7 +6,7 @@
 
     <groupId>ltd.rymc</groupId>
     <artifactId>RenYuan-Lib</artifactId>
-    <version>4.0.6</version>
+    <version>4.0.7</version>
     <packaging>jar</packaging>
 
     <name>RenYuan-Lib</name>
